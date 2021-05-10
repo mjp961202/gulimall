@@ -1,8 +1,10 @@
 package com.mjp.gulimall.ware;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan("com.mjp.gulimall.ware.dao")
 @SpringBootApplication
 public class GulimallWareApplication {
 
