@@ -1,10 +1,10 @@
 server:
-  port: 7000
+  port: 8080
 
 spring:
   application:
     #\u540D\u79F0
-    name: gulimall-coupon
+    name: gulimall-gateway
   profiles:
     #\u73AF\u5883\u914D\u7F6E
     active: dev
@@ -26,5 +26,3 @@ spring:
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         #\u5206\u7EC4
         group: ${spring.profiles.active}
-
-

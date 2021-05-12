@@ -4,6 +4,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
+/**
+ * 优惠券服务
+ */
 @MapperScan("com.mjp.gulimall.coupon.dao")
 @SpringCloudApplication
 public class GulimallCouponApplication {
