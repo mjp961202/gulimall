@@ -1,0 +1,32 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    #\u540D\u79F0
+    name: gulimall-coupon
+  profiles:
+    #\u73AF\u5883\u914D\u7F6E
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        #\u670D\u52A1\u5730\u5740
+        server-addr: 127.0.0.1:8848
+        namespace: fb8dd2a5-3667-4015-aec3-e495df72d435
+        group: ${spring.profiles.active}
+      config:
+        #\u914D\u7F6E\u5730\u5740
+        server-addr: 127.0.0.1:8848
+        #\u6587\u4EF6\u6269\u5C55\u540D
+        file-extension: yml
+        #\u547D\u540D\u7A7A\u95F4
+        namespace: fb8dd2a5-3667-4015-aec3-e495df72d435
+        #\u901A\u7528\u914D\u7F6E
+        shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        #\u5206\u7EC4
+        group: ${spring.profiles.active}
+        #\u52A8\u6001\u5237\u65B0
+        refresh-enabled: true
+
+
